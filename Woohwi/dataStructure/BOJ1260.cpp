@@ -52,24 +52,23 @@ int main(){
 }
 
 void DFS(int start){
-    stack<int> s; // 스택 초기화
+    stack<int> s;
     s.push(start);
     visited[start] = true;
-    cout << start << " "; // 첫 번째 방문 정점 출력
+    cout << start << " ";
 
     while(!s.empty()){
         int vertex = s.top();
         s.pop();
 
-        // 인접 정점 탐색
         for(int i = 0; i < graph[vertex].size(); i++){ 
             int next = graph[vertex][i];
             if(!visited[next]){
-                visited[next] = true; // 방문 체크
-                cout << next << " ";  // 출력
-                s.push(vertex);       // 현재 정점 재삽입
-                s.push(next);         // 다음 정점 스택에 추가
-                break;                // 첫 번째 미방문 정점만 탐색
+                visited[next] = true;
+                cout << next << " ";
+                s.push(vertex); 
+                s.push(next); 
+                break;
             }
         }
     }
