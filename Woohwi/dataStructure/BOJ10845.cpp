@@ -1,3 +1,9 @@
+/*
+https://www.acmicpc.net/problem/10845
+
+큐를 구현해봅자!
+*/
+
 #include <iostream>
 #define MAX 10001
 
