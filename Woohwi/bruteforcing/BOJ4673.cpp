@@ -11,19 +11,24 @@ using namespace std;
 
 int checkSelf(int n);
 
-int main(){
+int main()
+{
     bool arr[MAX] = {false};
 
-    for(int i = 1; i < MAX; i++){
+    for (int i = 1; i < MAX; i++)
+    {
         int n = checkSelf(i);
 
-        if(n < 10001){
+        if (n < 10001)
+        {
             arr[n] = true;
         }
     }
 
-    for(int i = 1; i < MAX; i++){
-        if(!arr[i]){
+    for (int i = 1; i < MAX; i++)
+    {
+        if (!arr[i])
+        {
             cout << i << endl;
         }
     }
@@ -31,7 +36,8 @@ int main(){
     return 0;
 }
 
-int checkSelf(int n){
+int checkSelf(int n)
+{
 
     int num = n;
     while (n != 0)
@@ -41,5 +47,4 @@ int checkSelf(int n){
     }
 
     return num;
-    
 }
