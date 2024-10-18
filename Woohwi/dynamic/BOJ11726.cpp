@@ -18,11 +18,10 @@ int main(){
     table[2] = 2;
 
     for(int i = 3; i <= n; i++){
-        table[i] = (table[i-1]+table[i-2]) % 1007;
+        table[i] = (table[i-1]+table[i-2]) % 10007;
     }
 
-    cout << table[n];
-    printf("\n");
+    cout << table[n] << endl;
 
 
 }
